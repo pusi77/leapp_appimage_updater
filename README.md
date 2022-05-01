@@ -10,8 +10,9 @@ wget -O - https://raw.githubusercontent.com/pusi77/leapp_appimage_updater/main/l
 ```
 
 # Usage
+If no version is specified, the latest one will be used.
 ```
-./leapp_install_and_update.sh <leapp_version>
+./leapp_install_and_update.sh [<leapp_version>]
 ```
 Example:
 ```

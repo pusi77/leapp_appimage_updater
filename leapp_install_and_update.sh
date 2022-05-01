@@ -13,17 +13,12 @@ handleError() {
   echo "where and why the error happened."
 }
 
-printUsage() {
-  echo "Usage: leapp_install_and_update.sh <leapp_version>"
-  echo "Example: leapp_install_and_update.sh 0.12.0"
-}
-
 #-----------------------------------------------------
 # Inputs
 #-----------------------------------------------------
 if [ -z "$1" ]; then
-  printUsage
-  exit 1
+  # No version specified, use latest (this was the easiest way to do it)
+  RELEASE_VERSION=$(wget -qO - "https://docs.leapp.cloud/latest/" | grep -Po -i '(\d+).(\d+).(\d+)' | sort -rV | head -1)
 else
   RELEASE_VERSION=$1
 fi
