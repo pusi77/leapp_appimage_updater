@@ -18,7 +18,7 @@ handleError() {
 #-----------------------------------------------------
 if [ -z "$1" ]; then
   # No version specified, use latest (this was the easiest way to do it)
-  RELEASE_VERSION=$(wget -qO - "https://docs.leapp.cloud/latest/" | grep -Po -i '(\d+).(\d+).(\d+)' | sort -rV | head -1)
+  RELEASE_VERSION=$(curl https://api.github.com/repos/Noovolari/leapp/releases/latest -s | jq .name -r | sed 's/v//')
 else
   RELEASE_VERSION=$1
 fi
