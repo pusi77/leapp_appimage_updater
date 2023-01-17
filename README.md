@@ -1,5 +1,5 @@
 # leapp_appimage_updater
-Bash script to install and update Leapp Appimage. It also creates the menu entry.
+Bash script to install and update [Leapp](https://github.com/Noovolari/leapp) Appimage. It also creates the menu entry.
 
 This is strongly based (= shamelessly copied) on [Joplin](https://github.com/laurent22/joplin)'s install script. You can find it [here](https://github.com/laurent22/joplin/blob/dev/Joplin_install_and_update.sh)
 
